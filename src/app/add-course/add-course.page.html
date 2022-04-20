@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Add course</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label>Enter course name</ion-label>
+    <ion-input [(ngModel)]="name" type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Enter course description</ion-label>
+    <ion-input [(ngModel)]="description" type="text"></ion-input>
+  </ion-item>
+
+  <ion-button (click)="btnLogin()" color="secondary" expand="block">ADD</ion-button>
+</ion-content>

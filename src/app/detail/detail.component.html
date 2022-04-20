@@ -1,0 +1,8 @@
+<ion-item *ngIf="detail" [routerLink]="'/detail/' + detail.id" [detail]="false">
+  <div slot="start" [class]="!detail.read ? 'dot dot-unread' : 'dot'"></div>
+  <ion-label class="ion-text-wrap">
+    <h2>
+      {{ detail.course }}
+    </h2>
+  </ion-label>
+  </ion-item>

@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 
-export interface Message {
-  fromName: string;
-  subject: string;
-  date: string;
+export interface Detail {
+  
   id: number;
+  course: string;
+  description: string;
   read: boolean;
 }
 
@@ -12,72 +12,34 @@ export interface Message {
   providedIn: 'root'
 })
 export class DataService {
-  public messages: Message[] = [
+  public details: Detail[] = [
     {
-      fromName: 'Matt Chorsey',
-      subject: 'New event: Trip to Vegas',
-      date: '9:32 AM',
       id: 0,
+      course: 'APPLIED MACHINE LEARNING CRN-45159-202102',
+      description: 'This course is a hands-on introduction to the field of Deep Learning using Python and the Keras library. It will explore applications of Deep Learning techniques for processing text and image data. We will also use the Natural Language Toolkit (NLTK) library to preprocess text for use with Machine Learning algorithms.',
       read: false
     },
     {
-      fromName: 'Lauren Ruthford',
-      subject: 'Long time no chat',
-      date: '6:12 AM',
       id: 1,
+      course: 'FULL STACK DEVELOPMENT II CRN-49745-202102',
+      description: 'At the end of this course, the student will reliably demonstrate the ability to: Design and implement a simple front-end web solution using Angular; tilize native features of Node.js using built-in modules.;Implement a data storage solution using MongoDB; Store and retrieve data to a MongoDB using Mongoose ODM; Implement and consume REST APIs with Node.js and Express',
       read: false
     },
     {
-      fromName: 'Jordan Firth',
-      subject: 'Report Results',
-      date: '4:55 AM',
       id: 2,
-      read: false
-    },
-    {
-      fromName: 'Bill Thomas',
-      subject: 'The situation',
-      date: 'Yesterday',
-      id: 3,
-      read: false
-    },
-    {
-      fromName: 'Joanne Pollan',
-      subject: 'Updated invitation: Swim lessons',
-      date: 'Yesterday',
-      id: 4,
-      read: false
-    },
-    {
-      fromName: 'Andrea Cornerston',
-      subject: 'Last minute ask',
-      date: 'Yesterday',
-      id: 5,
-      read: false
-    },
-    {
-      fromName: 'Moe Chamont',
-      subject: 'Family Calendar - Version 1',
-      date: 'Last Week',
-      id: 6,
-      read: false
-    },
-    {
-      fromName: 'Kelly Richardson',
-      subject: 'Placeholder Headhots',
-      date: 'Last Week',
-      id: 7,
+      course: 'INTRO. TO CYBER SECURITY CRN-47983-202102',
+      description: 'At the end of this course, the student will reliably demonstrate the ability to; Recall security fundamental terms and diagrams; Apply and classify network discovery and security auditing techniques; Identify & baseline network traffic using network monitoring tools; Identify and filter various protocols and network ports; Implement various tactics to attack a network or application; Classify levels of database insecurities; Compare and differentiate SQL injections; Critique and execute mitigation techniques',
       read: false
     }
   ];
 
   constructor() { }
 
-  public getMessages(): Message[] {
-    return this.messages;
+  public getDetails(): Detail[] {
+    return this.details;
   }
 
-  public getMessageById(id: number): Message {
-    return this.messages[id];
+  public getDetailById(id: number): Detail {
+    return this.details[id];
   }
 }
